@@ -1,0 +1,28 @@
+<div class="container-fluid" id="footer">
+
+<div class="row">
+<hr>
+  <nav class="navbar navbar-default">
+      <%= link_to "<span class=\"glyphicon glyphicon-home\"></span>".html_safe, root_path, 
+        class: "btn btn-default navbar-btn btn-xs" %>
+      <%= link_to "About", about_path, class: "btn btn-default btn-xs" %> 
+      <%= link_to "Help", help_path, class: "btn btn-default btn-xs" %>
+      <%= link_to "Sitemap", sitemap_path, class: "btn btn-default btn-xs" %>
+      <%= link_to "Staff", staff_path, class: "btn btn-default btn-xs" %>
+      <%= link_to "Links", links_path, class: "btn btn-default btn-xs" %>
+      <%= link_to "<span class=\"glyphicon glyphicon-envelope\"></span>".html_safe,contact_path, 
+        class: "btn btn-default btn-xs" %>
+    <div class="navbar-header pull-right">
+      <%= link_to "Cornerstone", root_path, class: "navbar-brand" %>
+      <%= link_to image_tag("luka.jpg", alt: "My grandson Luka"), root_path, 
+        class: "navbar-brand", style: "padding: 0px;" %>
+    </div>
+  </nav>
+<hr>
+</div> <!-- row --> 
+
+<div class="row">
+  <p style="text-align: center;">Ivan Dolac, 2018</p>  
+</div> <!-- row --> 
+
+</div> <!-- container-fluid footer -->

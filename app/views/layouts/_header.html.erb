@@ -1,0 +1,63 @@
+<div class="container-fluid" id="header">
+<div class="row">
+<hr>
+<nav class="navbar navbar-default">
+
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <%= link_to image_tag("luka.jpg", alt: "My grandson Luka"), root_path, 
+      class: "navbar-brand", style: "padding: 0px;" %>
+    <%= link_to "Cornerstone", root_path, class: "navbar-brand" %>
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+      data-target="#collapse-1" aria-expanded="false" style="margin-right: 0px;">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="collapse-1">
+    <ul class="nav navbar-nav">
+        <% if logged_in? %>
+          <li><%= link_to "Users", users_path, class: "btn btn-default btn-lg" %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle btn btn-default btn-lg" data-toggle="dropdown">
+              Account <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Profile", current_user %></li>
+              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to "Log out", logout_path, method: :delete %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to "Log in", login_path, class: "btn btn-default btn-lg"%></li>
+        <% end %>
+      </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Sign up", signup_path, class: "btn btn-default btn-lg"%></li>
+      <li><%= link_to "Contact", contact_path, class: "btn btn-default btn-lg" %></li>
+      <li class="dropdown">
+          <a href="#" class="dropdown-toggle btn btn-default btn-lg" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Go to<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "About", about_path %></li>
+            <li><%= link_to "Help", help_path %></li>
+            <li><%= link_to "Sitemap", sitemap_path %></li>
+            <li><%= link_to "Staff", staff_path %></li>
+            <li><%= link_to "Links", links_path %></li>
+          </ul>
+      </li> <!-- dropdown  -->
+    </ul>
+  </div> <!-- navbar-collapse -->
+
+</nav> <!-- navbar navbar-default -->
+<hr>
+</div> <!-- row -->
+</div> <!-- container-fluid header -->

@@ -1,0 +1,38 @@
+<% provide(:title, "Users List") %>
+<div class="container-fluid" id="main">
+<div class="row">
+
+  <h2>Users List</h2>
+  
+  <%= link_to 'New User', new_user_path,  role: "button",
+    class: "btn btn-default btn-xs", style: "margin: 0 0 20px 20px" %>
+  
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th colspan="3">Action</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= link_to 'Show', user %></td>
+          <td><%= link_to 'Edit', edit_user_path(user) %></td>
+          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <%= link_to 'New User', new_user_path,  role: "button",
+    class: "btn btn-default btn-xs", style: "margin: 0 0 20px 20px" %>
+
+</div>  <!-- row -->
+</div> <!-- container-fluid -->

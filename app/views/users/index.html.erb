@@ -1,0 +1,16 @@
+<% provide(:title, "Users List") %>
+<div class="container-fluid" id="main">
+<div class="row">
+
+  <h2>Users List</h2>
+  
+<%= will_paginate %>
+
+<ul class="users">
+  <%= render @users %>
+</ul>
+
+<%= will_paginate %>
+
+</div>  <!-- row -->
+</div> <!-- container-fluid -->

@@ -1,0 +1,51 @@
+<div class="container-fluid" id="main">
+
+<% if logged_in? %>
+
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div> <!-- row -->
+
+<% else %>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-3" style= "padding: 0;">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="//youtube.com/embed/h3ruZwwpbgk?1&loop=1&playlist=h3ruZwwpbgk" 
+          allowfullscreen name="iframe_a"></iframe>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-3" style= "padding: 0;">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="//youtube.com/embed/sUW41slxvrw?1&loop=1&playlist=sUW41slxvrw" 
+          allowfullscreen name="iframe_a"></iframe>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-3" style= "padding: 0;">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="//youtube.com/embed/NUsoVlDFqZg?1&loop=1&playlist=NUsoVlDFqZg" 
+          allowfullscreen name="iframe_a"></iframe>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-3" style= "padding: 0;">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="//youtube.com/embed/TyHvyGVs42U?1&loop=1&playlist=TyHvyGVs42U" 
+          allowfullscreen name="iframe_a"></iframe>
+      </div>
+    </div>
+  </div> <!-- row -->
+
+<% end %>
+
+</div> <!-- container-fluid main -->
